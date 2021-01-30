@@ -49,6 +49,25 @@ module.exports = {
                 test: /\.(scss|css)$/,
                 use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
             },
+            {
+                test: /\.(ttf|woff|png)$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                    },
+                ],
+            },
+            // {
+            //     test: /\.ttf$/,
+            //     use: [
+            //         {
+            //             loader: 'ttf-loader',
+            //             options: {
+            //                 name: './font/[hash].[ext]',
+            //             },
+            //         },
+            //     ]
+            // }
         ],
     }
 }
